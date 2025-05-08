@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Invitación a Quinceañera</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="overlay">
+        <div class="container">
+            <h1>XV de Rebeca</h1>
+            
+            <div class="flores-decoracion">Con mucho amor...</div>
+            
+            <p class="invitacion-text">
+                El día que tanto he soñado está por llegar<br>
+                y quiero compartir contigo esta alegría sin igual.<br>
+                Por favor confirma tu asistencia para preparar<br>
+                una celebración llena de magia y felicidad.
+            </p>
+            
+            <form id="confirmacionForm">
+                <div class="form-group">
+                    <label for="nombre">Tu nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ej. María González">
+                </div>
+                
+                <div class="form-group">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" required placeholder="Ej. 55 1234 5678">
+                </div>
+                
+                <div class="form-group">
+                    <label for="acompanantes">¿Cuántos acompañantes tendrás?</label>
+                    <select id="acompanantes" name="acompanantes" required>
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="0">Vendré solo/a</option>
+                        <option value="1">1 acompañante</option>
+                        <option value="2">2 acompañantes</option>
+                        <option value="3">3 acompañantes</option>
+                        <option value="4">4 acompañantes</option>
+                      <option value="5">5 acompañantes</option>
+                    </select>
+                </div>
+                
+                <button type="submit">Confirmar Asistencia</button>
+            </form>
+            
+            <div class="detalles-evento">
+                <h2>Detalles del Evento</h2>
+                <p><strong>Fecha:</strong> Sábado, 7 de Junio de 2025</p>
+                <p><strong>Hora:</strong> 9:00 PM</p>
+                <p><strong>Recepción:</strong> Salón "La Cueva"</p>
+                <p><strong>Dirección:</strong> Col. El Mirador, La Junta, Chih.</p>
+            </div>
+            <div class="firma">Con cariño, Rebe </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+body {
+  background-image: url('https://i.imgur.com/UFLEg0A.jpeg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+
+
+.container {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(163, 203, 227, 0.3);
+  border: 1px solid rgba(163, 203, 227, 0.2);
+}
+
+h1 {
+  color: #6ea8d6;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 3em;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.invitacion-text {
+  text-align: center;
+  font-size: 1.2em;
+  margin-bottom: 40px;
+  line-height: 1.7;
+  color: #555;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #6ea8d6;
+  font-size: 1.1em;
+}
+
+input, select {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s;
+}
+
+input:focus, select:focus {
+  border-color: #a3cbe3;
+  box-shadow: 0 0 8px rgba(163, 203, 227, 0.4);
+  outline: none;
+}
+
+button {
+  background: linear-gradient(135deg, #6ea8d6, #95c7e0);
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  margin: 40px auto 0;
+  transition: all 0.3s;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+  font-size: 1.4em;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 8px rgba(110, 168, 214, 0.3);
+}
+
+button:hover {
+  background: linear-gradient(135deg, #5a93c4, #7fb8db);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(110, 168, 214, 0.4);
+}
+
+.flores-decoracion {
+  text-align: center;
+  margin: 30px 0;
+  font-size: 28px;
+  color: #a3cbe3;
+  font-family: 'Dancing Script', cursive;
+}
+
+.detalles-evento {
+  background-color: rgba(163, 203, 227, 0.1);
+  padding: 25px;
+  border-radius: 10px;
+  margin-top: 40px;
+  border-left: 4px solid #a3cbe3;
+}
+
+.detalles-evento h2 {
+  color: #6ea8d6;
+  text-align: center;
+  margin-top: 0;
+  font-family: 'Dancing Script', cursive;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.detalles-evento p {
+  margin-bottom: 12px;
+  font-size: 1.05em;
+}
+
+.detalles-evento strong {
+  color: #6ea8d6;
+}
+
+.firma {
+  text-align: center;
+  margin-top: 40px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.8em;
+  color: #6ea8d6;
+}
+
+@media (max-width: 768px) {
+  .container {
+      padding: 25px;
+      margin: 20px;
+  }
+  
+  h1 {
+      font-size: 2.2em;
+  }
+}
