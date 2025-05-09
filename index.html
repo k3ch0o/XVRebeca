@@ -1,11 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="styles.css" />
-
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invitación a Quinceañera</title>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
@@ -24,32 +21,41 @@
             </p>
             
             <form id="confirmacionForm">
-                <div class="form-group">
-                    <label for="nombre">Tu nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required placeholder="Ej. María González">
-                </div>
-                
-                <div class="form-group">
-                    <label for="telefono">Teléfono:</label>
-                    <input type="tel" id="telefono" name="telefono" required placeholder="Ej. 55 1234 5678">
-                </div>
-                
-                <div class="form-group">
-                    <label for="acompanantes">¿Cuántos acompañantes tendrás?</label>
-                    <select id="acompanantes" name="acompanantes" required>
+                    <label>Tu nombre:</label>
+                    <input type="text" id="Nombre" name="Nombre" required placeholder="Ej. María González">
+              <br/>
+                <label>Teléfono:</label>
+              <input type="tel" id="Telefono" name="Telefono" required placeholder="Ej. 55 1234 5678">
+              <br/>
+                    <label>¿Cuántos acompañantes tendrás?</label>
+                    <select id="Asistentes" name="Asistentes" required>
                         <option value="" disabled selected>Selecciona una opción</option>
-                        <option value="0">Vendré solo/a</option>
-                        <option value="1">1 acompañante</option>
-                        <option value="2">2 acompañantes</option>
-                        <option value="3">3 acompañantes</option>
-                        <option value="4">4 acompañantes</option>
-                      <option value="5">5 acompañantes</option>
+                        <option value="1">Vendré solo/a</option>
+                        <option value="2">1 acompañante</option>
+                        <option value="3">2 acompañantes</option>
+                        <option value="4">3 acompañantes</option>
+                        <option value="5">4 acompañantes</option>
+                      <option value="6">5 acompañantes</option>
                     </select>
-                </div>
-                
                 <button type="submit">Confirmar Asistencia</button>
             </form>
             
+          <script>
+document.getElementById('confirmacionForm').addEventListener('submit', async function (e) {
+  e.preventDefault();
+  const datos = new FormData(this);
+  const obj = Object.fromEntries(datos.entries());
+
+  await fetch('https://sheetdb.io/api/v1/hpdaf2dshwf9o', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({ data: obj })
+  });
+
+  this.reset();
+});
+</script>
+          
             <div class="detalles-evento">
                 <h2>Detalles del Evento</h2>
                 <p><strong>Fecha:</strong> Sábado, 7 de Junio de 2025</p>
@@ -60,6 +66,7 @@
             <div class="firma">Con cariño, Rebe </div>
         </div>
     </div>
-    <script src="script.js"></script>
+
+
 </body>
 </html>
