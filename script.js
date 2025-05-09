@@ -1,15 +1,16 @@
-document.getElementById('confirmacionForm').addEventListener('submit', function(e) {
+ document.getElementById('confirmacionForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
-    const nombre = document.getElementById('nombre').value;
-    const telefono = document.getElementById('telefono').value;
-    const acompanantes = document.getElementById('acompanantes').value;
-    
+    const nombre = document.getElementById('Nombre').value;
+    const telefono = document.getElementById('Telefono').value;
+    const acompanantes = document.getElementById('Asistentes').value;
+     
+   
     // Crear mensaje personalizado
     let mensaje = `¡Gracias ${nombre} por confirmar tu asistencia!\n`;
     mensaje += `Has reservado para ${parseInt(acompanantes) + 1} personas\n con el número de teléfono: ${telefono}\n`;
     mensaje += `Te esperamos el 7 de Junio en Salón "La Cueva"`;
-    
+   
     // Mostrar mensaje en un modal más elegante
     const modal = document.createElement('div');
     modal.style.position = 'fixed';
