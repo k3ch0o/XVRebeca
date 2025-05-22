@@ -8,7 +8,7 @@
    
     // Crear mensaje personalizado
     let mensaje = `¡Gracias ${nombre} por confirmar tu asistencia!\n`;
-    mensaje += `Has reservado para ${parseInt(acompanantes) + 1} personas\n con el número de teléfono: ${telefono}\n`;
+    mensaje += `Has reservado para ${parseInt(acompanantes) } personas\n con el número de teléfono: ${telefono}\n`;
     mensaje += `Te esperamos el 7 de Junio en Salón "La Cueva"`;
    
     // Mostrar mensaje en un modal más elegante
